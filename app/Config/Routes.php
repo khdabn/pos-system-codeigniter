@@ -7,3 +7,5 @@ $routes->get('/', 'Pages::index');
 $routes->get('/about', 'Pages::about');
 $routes->get('/customers', 'Customers::index');
 $routes->get('/users', 'Users::index');
+$routes->get('customer-accounts', 'CustomerAccounts::index');
+$routes->get('user-accounts', 'UserAccounts::index');

@@ -5,33 +5,33 @@
 </head>
 <body>
 
-    <h1>User Accounts</h1>
+<h1>User Accounts</h1>
 
-    <nav>
-        <a href="/">Home</a> |
-        <a href="/about">About</a> |
-        <a href="/customers">Customers</a> |
-        <a href="/users">Users</a>
-    </nav>
+<nav>
+    <a href="/">Home</a> |
+    <a href="/about">About</a> |
+    <a href="/customers">Customers</a> |
+    <a href="/users">Users</a>
+</nav>
 
-    <br>
+<br>
 
-    <table border="1" cellpadding="10">
+<table border="1" cellpadding="10">
+    <tr>
+        <th>Username</th>
+        <th>Full Name</th>
+        <th>Created At</th>
+    </tr>
+
+    <?php foreach ($users as $user): ?>
         <tr>
-            <th>Username</th>
-            <th>Full Name</th>
-            <th>Role</th>
+            <td><?= esc($user['username']) ?></td>
+            <td><?= esc($user['full_name']) ?></td>
+            <td><?= esc($user['created_at']) ?></td>
         </tr>
+    <?php endforeach; ?>
 
-        <?php foreach ($users as $user): ?>
-            <tr>
-                <td><?= esc($user['username']) ?></td>
-                <td><?= esc($user['full_name']) ?></td>
-                <td><?= esc($user['role']) ?></td>
-            </tr>
-        <?php endforeach; ?>
-
-    </table>
+</table>
 
 </body>
 </html>
